@@ -12,6 +12,9 @@ fl = 0
 mainflag1 = 0
 mainflag2 = 0
 
+# SPECIFY THE PATH WHERE FILES SHOULD BE STORED (END WITH THIS / or // or \ or \\ AS REQUIRED)
+fname1 = "C:\\Users\\PARTH SHAH\\OneDrive\\Desktop\\opencv\\"
+
 # FUNCTION TO IMPLEMENT ADD DATA
 def add_data():
     
@@ -238,21 +241,9 @@ def add_data():
     
     # CHECKING BOTH CONDITIONS (PHOTO UPLOADED AND ALL VALID INPUTS)
     if mainflag1 == 0 and mainflag2 == 0:
-        
-        counter=0
-        for s in img_path:
-            if s=='/':
-                counter+=1
-        fname=""
-        counterr=0
-        for s in img_path:
-            fname+=s
-            if(s=='/'):
-                counterr+=1
-            if(counterr==counter):
-                break
                 
-        filename1 = fname + inp + ".csv"
+        global fname1
+        filename1 = fname1 + inp + ".csv"
 
         prevattend = []
 
@@ -319,8 +310,7 @@ def display_data():
     def show():
         valu = optionVar.get()
         
-        # PATH WHERE FILES ARE STORED (END WITH THIS / or // or \ or \\ AS REQUIRED)
-        fname1 = "C:\\Users\\PARTH SHAH\\OneDrive\\Desktop\\opencv\\images\\"
+        global fname1
 
         # IMPLEMENTATION OF FUNCTION 1
         if valu[0] == '1':
@@ -672,7 +662,7 @@ def cls():
     # MAIN GUI WINDOW
     mainWin = Tk()
     mainWin.title("Python-Project")
-    mainWin.geometry("400x340+100+200")
+    mainWin.geometry("400x385+100+200")
     mainWin.resizable(0, 0)
 
     v = IntVar()
@@ -680,8 +670,9 @@ def cls():
     Label(mainWin, text="Please select below one of the following.\n", padx=25, pady=20, font=("Arial Bold", 15)).pack(anchor=CENTER)
     Radiobutton(mainWin, text="1.ADD DATA\n", variable=v, value=1, padx=55, font=("Arial Bold", 15), fg="blue").pack(anchor=CENTER)
     Radiobutton(mainWin, text="2.DISPLAY DATA\n", variable=v, value=2, padx=55, font=("Arial Bold", 15),fg="blue").pack(anchor=CENTER)
-    Button(mainWin, text="Confirm", padx=55, pady=5, command=lambda: val(v.get()), bg="green", fg="white",font=("Arial Bold", 15)).pack()
-    Button(mainWin, text="Quit", padx=55, pady=5, command=on_closingmain, bg="red", fg="white",font=("Arial Bold", 15)).pack()
+    Button(mainWin, text="CONFIRM", padx=55, pady=5, command=lambda: val(v.get()), bg="green", fg="white",font=("Arial Bold", 15)).pack()
+    Button(mainWin, text="QUIT", padx=55, pady=5, command=on_closingmain, bg="red", fg="white",font=("Arial Bold", 15)).pack()
+    Label(mainWin, text='\n\nDeveloped by :\n "Akshat Shah, Devam Shah, Parth Shah"', font=("Arial Italic",11)).pack(anchor=SW)
     mainWin.mainloop()
 
 
