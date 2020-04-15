@@ -672,7 +672,7 @@ def cls():
     Radiobutton(mainWin, text="2.DISPLAY DATA\n", variable=v, value=2, padx=55, font=("Arial Bold", 15),fg="blue").pack(anchor=CENTER)
     Button(mainWin, text="CONFIRM", padx=55, pady=5, command=lambda: val(v.get()), bg="green", fg="white",font=("Arial Bold", 15)).pack()
     Button(mainWin, text="QUIT", padx=55, pady=5, command=on_closingmain, bg="red", fg="white",font=("Arial Bold", 15)).pack()
-    Label(mainWin, text='\n\nDeveloped by :\n "Akshat Shah, Devam Shah, Parth Shah"', font=("Arial Italic",11)).pack(anchor=SW)
+    # Label(mainWin, text='\n\nDeveloped by :\n "Akshat Shah, Devam Shah, Parth Shah"', font=("Arial Italic",11)).pack(anchor=SW)
     mainWin.mainloop()
 
 
