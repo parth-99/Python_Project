@@ -5,6 +5,8 @@ Project by:
            Devam Shah-18bce216
            Parth Shah-18bce219
 
+PLEASE READ LINE NUMBER 15 BEFORE RUNNING THE CODE.
+
 List of all the libraries (built-in modules) used in this Project:
 1. numpy
 2. csv
